@@ -6,7 +6,9 @@ import { Observable } from 'rxjs';
   providedIn: 'root'
 })
 export class SkillsService {
-  URL = 'http://localhost:8081/skills';
+//  URL = 'http://localhost:8081/skills';
+
+    URL = 'https://fernandoarielgattari@herokuapp.com/skills';
 
   constructor(private http:HttpClient) { }
 
