@@ -6,9 +6,10 @@ import { Observable } from 'rxjs';
   providedIn: 'root'
 })
 export class FooterService {
-//  URL = 'http://localhost:8081/footer';
 
-    URL = 'https://fernandoarielgattari@herokuapp.com/footer';
+  //URL = 'http://localhost:8081/footer';
+
+  URL = 'https://fernandoarielgattari.herokuapp.com/footer';
 
   constructor(private http:HttpClient) { }
 

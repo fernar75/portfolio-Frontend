@@ -6,9 +6,10 @@ import { Observable } from 'rxjs';
   providedIn: 'root'
 })
 export class ExperienciaService {
-//  URL = 'http://localhost:8081/experiencia';
+  
+  //URL = 'http://localhost:8081/experiencia';
 
-    URL = 'https://fernandoarielgattari@herokuapp.com/experiencia';
+  URL = 'https://fernandoarielgattari.herokuapp.com/experiencia';
 
   constructor(private http:HttpClient) { }
 

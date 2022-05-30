@@ -9,9 +9,9 @@ import { LoginDto } from '../models/LoginDto';
 })
 export class AuthService {
 
-//  URL = 'http://localhost:8081/';
+  //URL = 'http://localhost:8081/';
 
-    URL = 'https://fernandoarielgattari@herokuapp.com/';
+  URL = 'https://fernandoarielgattari.herokuapp.com/'
   
   constructor(private http: HttpClient) { }
 

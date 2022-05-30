@@ -6,9 +6,10 @@ import { Observable } from 'rxjs';
   providedIn: 'root'
 })
 export class PersonaService {
-//  URL = 'http://localhost:8081/personas';
+  
+  //URL = 'http://localhost:8081/personas';
 
-    URL = 'https://fernandoarielgattari@herokuapp.com/personas';
+  URL = 'https://fernandoarielgattari.herokuapp.com/personas';
 
   constructor(private http:HttpClient) { }
 
