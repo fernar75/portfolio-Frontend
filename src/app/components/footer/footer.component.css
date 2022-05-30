@@ -1,0 +1,17 @@
+* {
+    margin: 0px;
+    padding: 0px;
+}
+
+h6 {
+    text-align: center;
+    margin: auto;
+    font-style: italic;
+    color: gray;
+}
+
+button {
+    float: right;
+    margin-right: 50px;
+    margin-top: -20px;
+}

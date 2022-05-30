@@ -1,0 +1,61 @@
+* {
+    margin: 0px;
+    padding: 0px;
+}
+
+.card {
+    width: 95%;
+    margin-inline-start: auto;
+    margin-inline-end: auto;     
+    border-color: grey;
+    border-width: medium;
+    background-color: lightsteelblue;
+    border-radius: 20px;
+    margin-top: 10px         
+}
+
+
+.experiencia {  
+    margin: auto;  
+    text-align: center;    
+}
+
+
+.logo_empleo {
+    margin: auto;  
+    text-align: center;
+}
+
+
+.img-fluid {    
+    width: 140px;
+    height: 80px;
+    float: none; 
+}
+
+button {
+    float: right;
+    margin-right: 10px;
+}
+
+
+
+/*las media queries van siempre al final del css*/
+
+@media screen and (max-width: 991px) {
+    .container-fluid {
+        text-align: center;
+    }
+}
+
+
+
+
+
+
+
+  
+  
+
+
+

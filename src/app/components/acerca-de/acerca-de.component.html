@@ -1,0 +1,91 @@
+
+<div id="acerca-de">
+    
+    <div class="card">
+        <div class="container-fluid">
+            <div class="row" *ngFor="let per of persona">
+                <div class="nombre_y_titulo col-12 col-sm-12 col-md-12 col-lg-4 col-xl-4 col-xxl-4">
+                    <img src="{{per.urlFotoPerfil}}" class="img-fluid" alt="Foto de Perfil">
+                    <button *ngIf="isUserLogged"><a (click)="onOpenModal('edit', per)"><i class="fa fa-pen"></i></a></button>
+                    <h3>{{per.nombreYApellido}}</h3>
+                    <button *ngIf="isUserLogged"><a (click)="onOpenModal('edit', per)"><i class="fa fa-pen"></i></a></button>
+                    <p id="titulo">{{per.titulo}}</p>                                                                 
+                </div>            
+                <div class="acerca_de col-12 col-sm-12 col-md-12 col-lg-8 col-xl-8 col-xxl-8">
+                    <div>  
+                        <h1>Acerca de...</h1>
+                        <br>
+                        <button *ngIf="isUserLogged"><a (click)="onOpenModal('edit', per)"><i class="fa fa-pen"></i></a></button>
+                        <p>{{per.acercaDe}}</p>
+                    </div>            
+                </div>       
+            </div>
+            <br>
+        </div>
+    </div>
+    
+    <!--*************************************************************************************************-->      
+    
+    <!-- Modales -->      
+    
+    <!-- Modal editar -->
+    <div class="modal fade" id="updatePersonaModal" tabindex="-1" role="dialog" aria-labelledby="editPersonaLabel" aria-hidden="true">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="updateModalLabel">Editar Acerca de...</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <form #editForm = "ngForm">
+                        <input type="hidden" ngModel="{{editPersona?.id}}" name="id" class="form-control" id="id" placeholder="Id">                      
+                        <div class="from-group">
+                            <label for="urlFotoPerfil">Url Foto Perfil</label>
+                            <input type="text" ngModel="{{editPersona?.urlFotoPerfil}}" class="form-control" id="urlFotoPerfil" name="urlFotoPerfil" placeholder="Url Foto Perfil" required>
+                        </div>
+                        <div class="from-group">
+                            <label for="nombreYApellido">Nombre y Apellido</label>
+                            <input type="text" ngModel="{{editPersona?.nombreYApellido}}" class="form-control" id="nombreYApellido" name="nombreYApellido" placeholder="Nombre y Apellido" required>
+                        </div>
+                        <div class="from-group">
+                            <label for="titulo">Título</label>
+                            <input type="text" ngModel="{{editPersona?.titulo}}" class="form-control" id="titulo" name="titulo" placeholder="Título" required>
+                        </div>
+                        <div class="from-group">
+                            <label for="acercaDe">Acerca de...</label>
+                            <input type="text" ngModel="{{editPersona?.acercaDe}}" class="form-control" id="acercaDe" name="acercaDe" placeholder="Acerca de..." required>
+                        </div>
+                        
+                        <div class="modal-footer">
+                            <button type="button" id="update-persona-modal" class="btn btn-secondary" data-dismiss="modal">Cerrar</button>
+                            <button (click)="onUpdatePersona(editForm.value)" data-dismiss="modal" class="btn btn-danger">Guardar</button>
+                        </div> 
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div> 
+    
+    
+    
+    <!--*************************************************************************************************-->      
+    
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

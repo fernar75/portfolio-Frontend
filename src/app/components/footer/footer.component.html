@@ -1,0 +1,50 @@
+
+<div id="footer">
+
+   <div class="container-fluid" *ngFor="let foo of footer">                          
+      <h6>Desarrollado por: {{foo.nombreDesarrollador}} - ©{{foo.anio}}</h6>
+      <button *ngIf="isUserLogged"><a (click)="onOpenModal('edit', foo)"><i class="fa fa-pen"></i></a></button>                         
+   </div>
+
+<!--*************************************************************************************************-->      
+    
+    <!-- Modales -->      
+    
+  <!-- Modal editar -->
+  <div class="modal fade" id="updateFooterModal" tabindex="-1" role="dialog" aria-labelledby="editFooterLabel" aria-hidden="true">
+      <div class="modal-dialog" role="document">
+          <div class="modal-content">
+              <div class="modal-header">
+                  <h5 class="modal-title" id="updateModalLabel">Editar Footer</h5>
+                  <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                      <span aria-hidden="true">&times;</span>
+                  </button>
+              </div>
+              <div class="modal-body">
+                  <form #editForm = "ngForm">
+                      <input type="hidden" ngModel="{{editFooter?.id}}" name="id" class="form-control" id="id" placeholder="Id">                      
+                      <div class="from-group">
+                          <label for="nombreDesarrollador">Nombre Desarrollador</label>
+                          <input type="text" ngModel="{{editFooter?.nombreDesarrollador}}" class="form-control" id="nombreDesarrollador" name="nombreDesarrollador" placeholder="Nombre Desarrollador" required>
+                      </div>
+                      <div class="from-group">
+                        <label for="anio">Año</label>
+                        <input type="text" ngModel="{{editFooter?.anio}}" class="form-control" id="anio" name="anio" placeholder="Año" required>
+                    </div>
+                                           
+                      <div class="modal-footer">
+                          <button type="button" id="update-footer-modal" class="btn btn-secondary" data-dismiss="modal">Cerrar</button>
+                          <button (click)="onUpdateFooter(editForm.value)" data-dismiss="modal" class="btn btn-danger">Guardar</button>
+                      </div> 
+                  </form>
+              </div>
+          </div>
+      </div>
+  </div> 
+
+
+  
+  <!--*************************************************************************************************-->      
+
+
+</div>

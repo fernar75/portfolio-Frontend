@@ -1,0 +1,75 @@
+* {
+    margin: 0px;
+    padding: 0px;
+}
+
+.card {
+    width: 95%;
+    margin-inline-start: auto;
+    margin-inline-end: auto;    
+    margin-top: 10px;
+    border-color: grey;
+    border-width: medium;
+    background-color: lightsteelblue; 
+    border-radius: 20px;       
+}
+
+
+.nombre_y_titulo {
+    margin: auto;  
+    text-align: center;    
+}
+
+.acerca_de {
+    margin: auto;
+}
+
+.img-fluid {    
+    width: 180px;
+    height: 180px;
+    border-radius:90px;
+    margin-top: -100px;   
+}
+
+#titulo {
+    font-style: italic;
+    font-weight: bold;
+}
+
+button {
+    float: right;
+    margin-right: 10px;
+}
+
+
+/*las media queries van siempre al final del css*/
+
+@media screen and (max-width: 991px) {
+    .container-fluid {
+        text-align: center;
+    }
+    h1 {
+        margin-top: 15px;
+    } 
+    .img-fluid {    
+        width: 160px;
+        height: 160px;          
+    }
+}
+
+@media screen and (max-width: 192px) {
+    .img-fluid {
+        width: 130px;
+        height: 130px;
+        margin-top: -60px;
+    }    
+}
+
+
+
+
+
+
+
+
+

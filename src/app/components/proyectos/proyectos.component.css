@@ -1,0 +1,58 @@
+* {
+    margin: 0px;
+    padding: 0px;
+}
+
+.card {
+    width: 95%;
+    margin-inline-start: auto;
+    margin-inline-end: auto;     
+    border-color: grey;
+    border-width: medium;
+    background-color: lightsteelblue;
+    border-radius: 20px;
+    margin-top: 10px         
+}
+
+
+.proyectos {
+    margin: auto;
+    text-align: center;    
+}
+
+
+.foto_proyecto {
+    margin: auto;
+    text-align: center;    
+}
+
+.img-fluid {    
+    width: 250px;
+    height: 250px;
+    float: none;
+    padding-bottom: 15px; 
+    padding-top: 10px;
+}
+
+button {
+    float: right;
+    margin-right: 10px;
+}
+
+
+/*las media queries van siempre al final del css*/
+
+@media screen and (max-width: 991px) {
+    .container-fluid {
+        text-align: center;
+    }
+}
+
+
+
+
+
+
+
+  
+  

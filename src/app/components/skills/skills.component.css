@@ -1,0 +1,54 @@
+* {
+    margin: 0px;
+    padding: 0px;
+}
+
+.card {
+    width: 95%;
+    margin-inline-start: auto;
+    margin-inline-end: auto;    
+    margin-top: 10px;
+    border-color: grey;
+    border-width: medium;
+    background-color: lightsteelblue;
+    border-radius: 20px;   
+}
+
+
+.hard_and_soft_skills h1 {
+    margin: auto;
+    text-align: center;    
+}
+
+
+h3 {
+    text-align: center;
+}
+
+
+.skill {
+    text-align: center;
+}
+
+
+button {
+    float: right;
+    margin-right: 10px;
+    margin-top: 10px;
+}
+
+
+/*las media queries van siempre al final del css*/
+
+@media screen and (max-width: 991px) {
+    .container-fluid {
+        text-align: center;
+    }
+}
+
+
+
+
+
+
+
